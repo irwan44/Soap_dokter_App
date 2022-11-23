@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#F8F8F8"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/pg_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/bariol_bold"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:textColor="@color/colorfont"
+                            android:layout_marginTop="20dp"
+                            android:text="Detail Pasien MR"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="40dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="40dp"
+                            android:onClick="back"
+                            app:navigationIcon="@drawable/icon_left"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="167dp"
+                android:paddingVertical="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgPasien"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/profile22"
+                    app:civ_circle_background_color="@android:color/white">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/txNamaPasien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgPasien"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+
+                </TextView>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingVertical="5dp"
+                android:text="Data Pasien"
+                android:fontFamily="@font/bariol_bold"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/ic_background_accent_rounded_ijo"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textColor="@color/colorfont"
+                            android:text="No MR"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txNoMR"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/LayoutItem"
+                    android:background="#F8F8F8" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:text="Sex"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorfont"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/LayoutItem"
+                android:background="#F8F8F8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:text="Umur"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textColor="@color/colorfont"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/txUmur"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/LayoutItem"
+                    android:background="#F8F8F8" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Golongan Darah"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorfont"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txGolDar"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/LayoutItem"
+                android:background="#F8F8F8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Alergi"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textColor="@color/colorfont"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txAlergi"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/LayoutItem"
+                    android:background="#F8F8F8" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginVertical="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginBottom="5dp"
+                            android:text="Alamat"
+                            android:fontFamily="@font/bariol_bold"
+                            android:textColor="@color/colorfont"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/txAlamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="3"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            tools:ignore="RtlCompat"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/bariol_bold"
+                android:text="Data History Pasien"
+                android:textColor="@color/purple_500"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRiwayatPasien"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/ic_circle_white"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="Riwayat\nPengobatan\nPasien"
+                    android:textColor="@color/purple_500"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLabPasien"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/ic_circle_white"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="Riwayat\nLaboratorium\nPasien"
+                    android:textColor="@color/purple_500"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRadPasien"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/ic_circle_white"
+                    android:gravity="center"
+                    android:paddingHorizontal="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="Riwayat\nRadiologi\nPasien"
+                    android:textColor="@color/purple_500"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

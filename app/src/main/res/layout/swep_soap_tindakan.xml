@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_dialog"
+    app:behavior_hideable="true"
+    app:circularflow_defaultRadius="10dp"
+    app:behavior_peekHeight="45dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="7dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#7ECECD"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rgJenisTindakan"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbTindakan"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="70dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/radio_selector"
+                    android:button="@color/transparan"
+                    android:elevation="1dp"
+                    android:fontFamily="@font/bariol_bold"
+                    android:gravity="center"
+                    android:text="Tindakan"
+                    android:textColor="@color/teal_700" />
+
+                <RadioButton
+                    android:id="@+id/rbObat"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/radio_selector"
+                    android:button="@color/transparan"
+                    android:elevation="1dp"
+                    android:fontFamily="@font/bariol_bold"
+                    android:gravity="center"
+                    android:text="Obat BPAKO"
+                    android:textColor="@color/teal_700" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorfont"
+                    android:text="Tindakan"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/spnObat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutExpandable"
+                android:visibility="visible"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/ic_background_accent_rounded_ijo"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorfont"
+                        android:text="Tersedia"
+                        android:fontFamily="@font/bariol_bold"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtStok"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/transparan"
+                        android:hint="0"
+                        android:fontFamily="@font/bariol_bold"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/primaryColor"
+                        android:textColorHint="@color/primaryColor"
+                        android:textSize="14sp"
+                        android:enabled="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/ic_background_accent_rounded_ijo"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="5dp"
+                        android:layout_gravity="center"
+                        android:text="Jumlah"
+                        android:fontFamily="@font/bariol_bold"
+                        android:textColor="@color/colorfont"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtJumlah"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/transparan"
+                        android:hint="Masukkan Jumlah Obat"
+                        android:inputType="number"
+                        android:fontFamily="@font/bariol_bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/primaryColor"
+                        android:textColorHint="@android:color/holo_red_light"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginVertical="10dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Simpan"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/ic_background_accent_rounded_blue"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+</LinearLayout>

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_dialog"
+    app:behavior_hideable="true"
+    app:circularflow_defaultRadius="10dp"
+    app:behavior_peekHeight="45dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="7dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#7ECECD"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSrc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Cari Nama/Kode Obat"
+                    android:background="@color/transparan"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textSize="14sp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCari"
+                    android:layout_width="109dp"
+                    android:layout_height="31dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/round_corners"
+                    android:drawableLeft="@drawable/search"
+                    android:fontFamily="@font/bariol_bold"
+                    android:padding="3dp"
+                    android:text="Search"
+                    android:textAllCaps="false"
+                    android:textColor="#344054"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/colorfont"
+                    android:layout_gravity="center"
+                    android:text="List Obat"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/spnObat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:text="Tersedia"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorfont"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtStok"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:background="@color/transparan"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="14sp"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:layout_gravity="center"
+                    android:text="Jumlah"
+                    android:textColor="@color/colorfont"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtJumlah"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/transparan"
+                    android:hint="Masukkan Jumlah Obat"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/primaryColor"
+                    android:textColorHint="@color/primaryColor"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:paddingHorizontal="5dp"
+                    android:layout_gravity="center"
+                    android:paddingVertical="5dp"
+                    android:text="Jenis Ketersediaan"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textColor="@color/colorfont"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/spnKetersediaan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/ic_background_accent_rounded_ijo"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:text="Aturan Pemakaian"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorfont"
+                        android:fontFamily="@font/bariol_bold"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/spnAturanPakai"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/round_corners3"/>
+
+                    <LinearLayout
+                        android:id="@+id/layoutExpandableAturanPakai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"  android:visibility="gone"
+                        android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edtAturanJumlah"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/white"
+                                android:inputType="number"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/primaryColor"
+                                android:textColorHint="@color/primaryColor"
+                                android:textSize="12sp"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/primaryLightColor"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="X"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/edtAturanFrekuensi"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/white"
+                                android:inputType="number"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/primaryColor"
+                                android:textColorHint="@color/primaryColor"
+                                android:textSize="12sp"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TAB"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spnSesudahSebelum"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/round_corners3"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/ic_baseline_circle_24"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/bariol_bold"
+                        android:paddingLeft="5dp"
+                        android:text="Catatan"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtSubjektif"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:focusable="true"
+                            android:fontFamily="@font/bariol_bold"
+                            android:gravity="top|left"
+                            android:hint="Isi Catatan Pasien di sini"
+                            android:inputType="text|textMultiLine"
+                            android:overScrollMode="always"
+                            android:padding="5dp"
+                            android:textSize="14sp"
+                            android:scrollIndicators="right"
+                            android:scrollbarStyle="insideOverlay"
+                            android:scrollbars="vertical"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSimpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/ic_background_accent_rounded_blue"
+                android:paddingHorizontal="10dp"
+                android:text="Simpan"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSelesai"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Selesai"
+                android:background="@drawable/ic_background_accent_rounded_green"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

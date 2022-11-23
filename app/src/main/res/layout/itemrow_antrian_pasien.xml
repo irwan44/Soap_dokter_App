@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        app:cardElevation="0dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:onClick="medical"
+        android:background="@drawable/ripple"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="5dp">
+
+                <TextView
+                    android:id="@+id/txtNamaPasienAntri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mr. Test User"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nasabah  : "
+                        android:fontFamily="@font/bariol_regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/txtTipeNasabahAntrian"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Test Nasabah"
+                        android:fontFamily="@font/bariol_bold"
+                        android:textColor="@color/colorfont"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:text="Jam Antri : "
+                        android:fontFamily="@font/bariol_regular"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/txtJamAntrian"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="3dp"
+                        android:text="Test Jam"
+                        android:fontFamily="@font/bariol_bold"
+                        android:textColor="@color/colorfont"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="4dp"
+                android:scaleType="centerCrop">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="No Antrian"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textColor="@color/purple_500"
+                    android:textSize="6pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtNoAntrian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/bariol_bold"
+                    android:text="1"
+                    android:textColor="@color/purple_500"
+                    android:textSize="17pt"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

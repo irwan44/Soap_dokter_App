@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:gravity="center"
+    android:paddingVertical="2.5dp">
+
+    <LinearLayout
+        android:id="@+id/LayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:background="@drawable/ripple"
+            android:clickable="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgPasien"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:src="@drawable/profile22" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bariol_bold"
+                        android:text="Nomor Medical Record :"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txNoMR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/bariol_bold"
+                        android:text="00000101"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/bariol_bold"
+                        android:maxLines="1"
+                        android:text="Nama Pasient :"
+                        android:textColor="#595959" />
+
+                    <TextView
+                        android:id="@+id/txNamaPasien"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/bariol_bold"
+                        android:maxLines="1"
+                        android:text="ARISSA BUDIARTI, NY."
+                        android:textColor="#595959" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="75dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/colorfont"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Cek MR" />
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="75dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:src="@drawable/row" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
