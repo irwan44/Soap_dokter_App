@@ -16,6 +16,10 @@ public class MainAntrian extends AppCompatActivity {
         setContentView(R.layout.activity_main_antrian);
         getSupportActionBar().hide();
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
+
         /*//menerapkan tool bar sesuai id toolbar | ToolBarAtas adalah variabel buatan sndiri
         Toolbar LabToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(LabToolbar);

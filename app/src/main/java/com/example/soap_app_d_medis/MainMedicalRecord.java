@@ -16,6 +16,10 @@ public class MainMedicalRecord extends AppCompatActivity {
         setContentView(R.layout.activity_main_medical_record);
         getSupportActionBar().hide();
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
+
     }
     public void pasienMR (View view) {
         Intent i = new Intent(MainMedicalRecord.this, MainDetailMR.class);
