@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F8F8"
+    android:background="#F2F1F6"
     tools:context=".Fragment.User">
 
     <!-- TODO: Update blank fragment layout -->
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:text="Dokter"
                     android:fontFamily="@font/bariol_bold"
-                    android:textColor="#424242"
+                    android:textColor="@color/colorfont"
                     android:textSize="14sp" />
 
 
@@ -134,6 +134,7 @@
                     android:drawableLeft="@drawable/lock"
                     android:fontFamily="@font/bariol_bold"
                     android:gravity="center"
+                    android:textColor="@color/colorfont"
                     android:text="Ganti Password" />
 
             </LinearLayout>
@@ -161,6 +162,7 @@
                     android:drawablePadding="10dp"
                     android:drawableLeft="@drawable/info"
                     android:fontFamily="@font/bariol_bold"
+                    android:textColor="@color/colorfont"
                     android:gravity="center"
                     android:text="Informasion apps" />
 
@@ -188,6 +190,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:drawablePadding="10dp"
+                    android:textColor="@color/colorfont"
                     android:drawableLeft="@drawable/logout"
                     android:fontFamily="@font/bariol_bold"
                     android:text="Logout Apps"/>

@@ -1,21 +1,24 @@
 package com.example.soap_app_d_medis;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import com.example.soap_app_d_medis.swep.Swep_Soap_ICD10;
 import com.example.soap_app_d_medis.swep.Swep_Soap_Resep;
 import com.example.soap_app_d_medis.swep.Swep_Soap_Rujukan;
 import com.example.soap_app_d_medis.swep.Swep_Soap_Tindakan;
-import com.google.android.material.bottomappbar.BottomAppBar;
 
 public class MainSOAPMenu extends AppCompatActivity {
+
 
     Button btn_RujukanLab;
     RelativeLayout btn_Tindakan, btn_Resep, btn_icd10;
@@ -25,6 +28,10 @@ public class MainSOAPMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_soap_menu);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
 
         getSupportActionBar().hide();
 
@@ -69,5 +76,10 @@ public class MainSOAPMenu extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void medical (View view) {
+        Intent i = new Intent(MainSOAPMenu.this, MainDetailMR.class);
+        startActivity(i);
     }
 }

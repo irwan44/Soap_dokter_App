@@ -26,4 +26,9 @@ public class MainMedicalRecord extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void medical (View view) {
+        Intent i = new Intent(MainMedicalRecord.this, MainDetailMR.class);
+        startActivity(i);
+    }
+
 }

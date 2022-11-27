@@ -1,201 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F8F8F8"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F2F1F6"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:id="@+id/pg_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bgblue"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView"
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/bariol_bold"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:textColor="@color/colorfont"
-                    android:layout_marginTop="20dp"
-                    android:text="Hasil Pasien"
+                    android:layout_height="92dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="40dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="40dp"
-                    android:onClick="back"
-                    app:navigationIcon="@drawable/icon_left"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/transparan"
+                        android:layout_height="match_parent">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:text="List Pasien Soap"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/circularsolid"
-            tools:ignore="MissingConstraints">
+                            <androidx.appcompat.widget.Toolbar
+                                android:id="@+id/toolbar"
+                                android:layout_width="40dp"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="37dp"
+                                android:onClick="back"
+                                app:navigationIcon="@drawable/arrow_left_circle"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:background="@drawable/ripple"
-                android:clickable="true"
-                android:orientation="horizontal"
-                android:padding="14dp">
-
-                <androidx.appcompat.widget.SearchView
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clipToOutline="false"
-                    app:iconifiedByDefault="false"
-                    app:queryBackground="@null"
-                    app:queryHint="Pencarian Pasien">
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/border_white_1"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textColor="@color/colorfont">
 
-                </androidx.appcompat.widget.SearchView>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center_vertical" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/LayoutItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="104dp"
-                android:onClick="soapmenu"
-                android:background="@drawable/ripple"
-                android:clickable="true">
-
-
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imgPasien"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginVertical="5dp"
-                    android:src="@drawable/profile22" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginRight="10dp"
-                    android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ripple2"
+                        android:layout_height="match_parent"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/bariol_bold"
-                            android:text="Nomor Medical Record :"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txNoMR"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/bariol_bold"
-                            android:text="00000101"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ellipsize="end"
-                            android:fontFamily="@font/bariol_bold"
-                            android:maxLines="1"
-                            android:text="Nama Pasient :"
-                            android:textColor="#595959" />
-
-                        <TextView
-                            android:id="@+id/txNamaPasien"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:ellipsize="end"
-                            android:fontFamily="@font/bariol_bold"
-                            android:maxLines="1"
-                            android:text="ARISSA BUDIARTI, NY."
-                            android:textColor="#595959" />
-
-                    </LinearLayout>
                     <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="75dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/search" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="60dp"
+                        android:text="Search Soap ...."/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/bariol_bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorfont">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/bg24"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Selesai"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="top"
                         android:layout_marginHorizontal="10dp"
-                        android:layout_marginVertical="5dp"
-                        android:src="@drawable/row" />
+                        android:fontFamily="@font/bariol_bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorfont">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/bg24"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Panding"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/bariol_bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorfont">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/bg24"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/LayoutItem"
+                android:layout_width="match_parent"
+                android:layout_height="193dp"
+                android:layout_marginHorizontal="7dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ripple"
+                    android:clickable="true"
+                    android:onClick="soapmenu">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgPasien"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:src="@drawable/profile22" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="167dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/nomr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/bariol_bold"
+                                android:textColor="@color/colorfont"
+                                android:text="Nomor Medical Record :"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txnomr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="00000101"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/namepasien"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/bariol_bold"
+                                android:maxLines="1"
+                                android:text="Nama Pasient :"
+                                android:textColor="@color/colorfont" />
+
+                            <TextView
+                                android:id="@+id/txnamapasien"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/bariol_bold"
+                                android:maxLines="1"
+                                android:text="ARISSA BUDIARTI, NY." />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/bariol_bold"
+                                android:maxLines="1"
+                                android:text="Panding To Soap"
+                                android:textColor="#d32f2f" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="75dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="5dp"
+                            android:src="@drawable/row" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -29,11 +29,12 @@
                 android:layout_height="10dp"/>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="7dp"
+                android:layout_width="80dp"
+                android:layout_height="5dp"
                 android:layout_gravity="center"
                 app:cardCornerRadius="20dp"
-                app:cardBackgroundColor="#7ECECD"/>
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#F2F1F6"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -43,34 +44,39 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorfont"
                 android:textSize="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Rujukan Laboratorium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
                 android:textColor="@color/purple_500"
-                android:text="Jenis Layanan"
+                android:text="Jenis Layanan :"
                 android:fontFamily="@font/bariol_bold"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/rgJenisLayanan"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="20dp"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rbBiasa"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_height="30dp"
                     android:layout_marginRight="70dp"
                     android:clickable="true"
                     android:focusable="true"
@@ -86,7 +92,7 @@
                 <RadioButton
                     android:id="@+id/rbCito"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -99,32 +105,35 @@
                     android:textColor="@color/teal_700" />
             </RadioGroup>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
                 android:layout_marginVertical="5dp"
-                android:text="Jenis Pembayaran"
+                android:text="Jenis Pembayaran :"
                 android:fontFamily="@font/bariol_bold"
                 android:textSize="16sp"
                 android:textColor="@color/purple_500"
                 android:textStyle="bold"/>
+            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/rgJenisPembayaran"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="20dp"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/rbSebelumPeriksa"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_height="30dp"
                     android:layout_marginRight="60dp"
                     android:clickable="true"
                     android:focusable="true"
@@ -140,7 +149,7 @@
                 <RadioButton
                     android:id="@+id/rbSetelahPeriksa"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:clickable="true"
                     android:focusable="true"
@@ -320,8 +329,9 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSimpan"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
                     android:text="Simpan"
                     android:textColor="@color/white"
                     android:fontFamily="@font/bariol_bold"
@@ -355,6 +365,7 @@
             android:layout_height="35dp"
             android:background="@drawable/ic_background_accent_rounded_green"
             android:text="Selesai"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textStyle="bold"/>
 

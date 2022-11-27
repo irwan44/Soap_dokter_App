@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:indeterminate="true"
-    android:background="#F8F8F8">
+    android:background="#F2F1F6">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

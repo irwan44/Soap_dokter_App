@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_centerInParent="true"
     android:indeterminate="true"
-    android:background="#F8F8F8">
+    android:background="#F2F1F6">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -71,6 +71,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginRight="150dp"
                             android:src="@drawable/medicalrecord" />
 
                         <TextView
@@ -79,17 +80,21 @@
                             android:layout_gravity="bottom"
                             android:fontFamily="@font/bariol_bold"
                             android:layout_marginBottom="30dp"
+                            android:layout_marginRight="150dp"
                             android:gravity="center"
+                            android:textColor="@color/colorfont"
                             android:text="Medical Record" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
+                            android:textColor="@color/colorfont"
                             android:fontFamily="@font/bariol_regular"
                             android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="150dp"
                             android:gravity="center"
-                            android:textSize="10dp"
+                            android:textSize="15dp"
                             android:text="Menunjukkan Data \nMedical Record Pasien" />
 
 
@@ -102,6 +107,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -182,6 +188,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="64dp"
                             android:layout_marginTop="10dp"
+                            android:layout_marginRight="150dp"
                             android:src="@drawable/stethoscope_svgrepo_com__1_" />
 
                         <TextView
@@ -190,17 +197,21 @@
                             android:layout_gravity="bottom"
                             android:fontFamily="@font/bariol_bold"
                             android:layout_marginBottom="30dp"
+                            android:textColor="@color/colorfont"
+                            android:layout_marginRight="150dp"
                             android:gravity="center"
                             android:text="SOAP" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="bottom"
+                            android:layout_marginLeft="150dp"
+                            android:textColor="@color/colorfont"
                             android:fontFamily="@font/bariol_regular"
                             android:layout_marginBottom="5dp"
                             android:gravity="center"
-                            android:textSize="10dp"
+                            android:textSize="15dp"
                             android:text="Menunjukkan Data \nMedical Record Pasien" />
 
 
@@ -212,6 +223,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:visibility="gone"
                     android:orientation="vertical">
 
                     <LinearLayout

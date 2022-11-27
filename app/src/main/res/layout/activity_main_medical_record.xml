@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homehome5"
+    android:background="#F2F1F6"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainMedicalRecord">
 
     <androidx.core.widget.NestedScrollView
@@ -12,132 +12,271 @@
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:id="@+id/pg_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <androidx.cardview.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            app:cardBackgroundColor="@color/transparan"
-            app:cardElevation="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/bgblue"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView"
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/bariol_bold"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Medical Record"
+                    android:layout_height="92dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="40dp"
-                    android:layout_height="35dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="40dp"
-                    android:onClick="back"
-                    app:navigationIcon="@drawable/icon_left2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/transparan"
+                        android:layout_height="match_parent">
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="239dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="@color/transparan"
-            android:layout_marginBottom="20dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp">
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:text="Medical Record"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_marginTop="30dp"
-                android:layout_marginHorizontal="20dp"
-                android:background="@drawable/border_white_1"
-                android:fontFamily="@font/bariol_bold"
-                android:textColor="@color/colorfont">
+                            <androidx.appcompat.widget.Toolbar
+                                android:id="@+id/toolbar"
+                                android:layout_width="40dp"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="37dp"
+                                app:navigationIcon="@drawable/arrow_left_circle"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
 
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/border_white_1"
+                    android:fontFamily="@font/bariol_bold"
+                    android:textColor="@color/colorfont">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/ripple2"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/search" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="60dp"
+                        android:text="Search Medical Record ...."/>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:clickable="true"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_marginBottom="1dp"
-                    android:background="@drawable/ripple2"
-                    android:layout_height="match_parent"/>
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/search" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="60dp"
-                    android:text="Search Antrian ...."/>
-
-            </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/bariol_bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorfont">
 
 
-        </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/bg24"
+                            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:padding="10dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Selesai"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
 
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="top"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/bariol_bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorfont">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/bg24"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Panding"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="top"
+                        android:fontFamily="@font/bariol_bold"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColor="@color/colorfont">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="@drawable/bg24"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pasien MR"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:fontFamily="@font/bariol_bold"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/LayoutItem"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="185dp"
                 android:layout_marginHorizontal="7dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/card"
                     android:layout_width="match_parent"
-                    android:layout_height="104dp"
-                    android:onClick="pasienMR"
+                    android:layout_height="158dp"
                     android:background="@drawable/ripple"
-                    android:clickable="true">
+                    android:clickable="true"
+                    android:onClick="medical">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/imgPasien"
@@ -156,20 +295,22 @@
 
                         <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="149dp"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/nomr"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/bariol_bold"
+                                android:textColor="@color/colorfont"
                                 android:text="Nomor Medical Record :"
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/txNoMR"
+                                android:id="@+id/txnomr"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="8dp"
@@ -178,13 +319,14 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/namepasien"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:ellipsize="end"
                                 android:fontFamily="@font/bariol_bold"
                                 android:maxLines="1"
                                 android:text="Nama Pasient :"
-                                android:textColor="#595959" />
+                                android:textColor="@color/colorfont" />
 
                             <TextView
                                 android:id="@+id/txNamaPasien"
@@ -193,8 +335,27 @@
                                 android:ellipsize="end"
                                 android:fontFamily="@font/bariol_bold"
                                 android:maxLines="1"
-                                android:text="ARISSA BUDIARTI, NY."
-                                android:textColor="#595959" />
+                                android:text="ARISSA BUDIARTI, NY." />
+
+                            <TextView
+                                android:id="@+id/nmaklinik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:maxLines="1"
+                                android:text="Klinik :"
+                                android:textColor="@color/colorfont" />
+
+                            <TextView
+                                android:id="@+id/txnmaklinik"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Omega Tiga"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -203,11 +364,12 @@
                             android:layout_height="75dp"
                             android:layout_marginHorizontal="5dp"
                             android:layout_marginVertical="5dp"
-                            android:textColor="@color/purple_500"
                             android:fontFamily="@font/bariol_bold"
-                            android:textStyle="bold"
                             android:gravity="center"
-                            android:text="Cek MR" />
+                            android:text="Cek MR"
+                            android:textColor="@color/colorfont"
+                            android:textStyle="bold" />
+
                         <ImageView
                             android:layout_width="35dp"
                             android:layout_height="75dp"
@@ -220,10 +382,7 @@
 
 
             </LinearLayout>
-
-
         </LinearLayout>
 
-    </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
