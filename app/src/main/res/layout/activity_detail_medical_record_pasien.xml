@@ -428,7 +428,7 @@
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnRiwayatPasien"
+                    android:id="@+id/btn_RiwayatPasien"
                     android:layout_width="100dp"
                     android:layout_height="90dp"
                     android:drawablePadding="7dp"
