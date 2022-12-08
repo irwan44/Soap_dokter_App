@@ -7,6 +7,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -41,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
     }
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
     public void medical (View view) {
         Intent i = new Intent(MainActivity.this, MainMedicalRecord.class);
         startActivity(i);
@@ -55,6 +61,18 @@ public class MainActivity extends AppCompatActivity {
     }
     public void pendapatan (View view) {
         Intent i = new Intent(MainActivity.this, MainPendapatan.class);
+        startActivity(i);
+    }
+    public void gantipassword (View view) {
+        Intent i = new Intent(MainActivity.this, MainLupaPassword.class);
+        startActivity(i);
+    }
+    public void informasi (View view) {
+        Intent i = new Intent(MainActivity.this, MainInformasion.class);
+        startActivity(i);
+    }
+    public void edit (View view) {
+        Intent i = new Intent( MainActivity.this, MainEditProfile.class);
         startActivity(i);
     }
 

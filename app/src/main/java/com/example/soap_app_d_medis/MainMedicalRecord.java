@@ -30,5 +30,17 @@ public class MainMedicalRecord extends AppCompatActivity {
         Intent i = new Intent(MainMedicalRecord.this, MainDetailMR.class);
         startActivity(i);
     }
+    public void back1 (View view) {
+        Intent i = new Intent( MainMedicalRecord.this, MainActivity.class);
+        startActivity(i);
+    }
+    public void selesai (View view) {
+        Intent i = new Intent( MainMedicalRecord.this, MainListMRSelesai.class);
+        startActivity(i);
+    }
+    public void pending (View view) {
+        Intent i = new Intent( MainMedicalRecord.this, MainListMRPending.class);
+        startActivity(i);
+    }
 
 }

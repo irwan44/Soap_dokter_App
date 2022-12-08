@@ -27,4 +27,16 @@ public class MainSOAP extends AppCompatActivity {
         Intent i = new Intent(MainSOAP.this, MainSOAPMenu.class);
         startActivity(i);
     }
+    public void back3 (View view) {
+        Intent i = new Intent( MainSOAP.this, MainActivity.class);
+        startActivity(i);
+    }
+//    public void selesaisoap (View view) {
+//        Intent i = new Intent( MainSOAP.this, MainListMRSelesai.class);
+//        startActivity(i);
+//    }
+//    public void pendingsoap (View view) {
+//        Intent i = new Intent( MainSOAP.this, MainListMRPending.class);
+//        startActivity(i);
+//    }
 }

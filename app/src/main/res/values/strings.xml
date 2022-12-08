@@ -5,4 +5,13 @@
     <string name="title_search">DashBoard</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">
+        "Aplikasi dapat dipergunakan setiap saat tanpa harus melakukan Investasi yang besar dan"
+        "penyedian tenaga kerja (SDM) yang khusus menangani masalah Aplikasi.\n\n"
+        "Provider yang akan melakukan pemeliharaan serta pengembangan E-Klinik, Data dijamin"
+        "kerahasiaannya karena setiap Klinik disediakan Database tersendiri dengan Pengamanan Encrypting."
+        "Cakupan Aplikasi yaitu meliputi Pelayanan Klinik sampai dengan Manajemen Klinik dilengkapi"
+        "sesuai peratuaran yang ada, tanpa melakukan Investasi yang besar dan selalu ter-update baik"
+        "dari segi teknologi maupun peraturan yang berlaku."
+    </string>
 </resources>

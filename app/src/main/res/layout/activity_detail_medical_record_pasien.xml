@@ -3,7 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:background="#F2F1F6"
+    android:background="#F2F1F6"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -57,7 +57,7 @@
                                 android:layout_height="35dp"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginTop="37dp"
-                                android:onClick="back"
+                                android:onClick="back2"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
                                 app:navigationIcon="@drawable/arrow_left_circle" />
@@ -424,7 +424,7 @@
                 android:gravity="center"
                 android:layout_marginHorizontal="20dp"
                 android:background="@drawable/ic_background_accent_rounded_ijo"
-                android:translationY="-85dp"
+                android:translationY="-95dp"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatButton

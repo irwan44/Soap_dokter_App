@@ -49,6 +49,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:clickable="true"
+            android:onClick="edit"
             android:background="@drawable/ripple"
             android:padding="14dp"
             android:layout_height="match_parent">
@@ -125,6 +126,7 @@
                 android:clickable="true"
                 android:background="@drawable/ripple"
                 android:padding="14dp"
+                android:onClick="gantipassword"
                 android:layout_height="match_parent">
 
                 <TextView
@@ -154,6 +156,7 @@
                 android:clickable="true"
                 android:background="@drawable/ripple"
                 android:padding="14dp"
+                android:onClick="informasi"
                 android:layout_height="match_parent">
 
                 <TextView
@@ -179,6 +182,7 @@
             android:background="@drawable/circularsolid">
 
             <LinearLayout
+                android:id="@+id/btn_logout"
                 android:layout_width="match_parent"
                 android:clickable="true"
                 android:background="@drawable/ripple"
@@ -190,7 +194,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:drawablePadding="10dp"
-                    android:textColor="@color/colorfont"
+                    android:textColor="@color/secondaryColor"
                     android:drawableLeft="@drawable/logout"
                     android:fontFamily="@font/bariol_bold"
                     android:text="Logout Apps"/>

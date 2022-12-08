@@ -82,4 +82,8 @@ public class MainSOAPMenu extends AppCompatActivity {
         Intent i = new Intent(MainSOAPMenu.this, MainDetailMR.class);
         startActivity(i);
     }
+    public void back4 (View view) {
+        Intent i = new Intent( MainSOAPMenu.this, MainSOAP.class);
+        startActivity(i);
+    }
 }

@@ -7,7 +7,7 @@
     tools:context=".MainSplashScreen"
     android:layout_centerInParent="true"
     android:layout_centerVertical="true"
-    android:background="@android:color/white"
+    android:background="@drawable/android_large___2"
     android:layout_height="match_parent">
 
     <RelativeLayout
@@ -45,7 +45,7 @@
             android:fontFamily="@font/montserrat_bold"
             android:indeterminate="true"
             android:text="SOAP Dokter"
-            android:textColor="@color/colorfont"
+            android:textColor="@color/white"
             android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="@+id/progressBar"
             app:layout_constraintEnd_toEndOf="parent"

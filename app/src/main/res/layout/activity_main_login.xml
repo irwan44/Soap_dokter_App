@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerInParent="true"
+    android:indeterminate="true"
+    android:background="#F2F1F6">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:background="@drawable/round_corners4"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:src="@drawable/asset_2"
+                    android:padding="5dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login Akun SOAP"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/bariol_bold"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nestedScrollView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearLayoutCompat2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginBottom="32dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="10dp">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="Kode Klinik"
+                                android:fontFamily="@font/bariol_bold"
+                                android:drawableLeft="@drawable/ic_baseline_circle_24"
+                                android:drawablePadding="10dp"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_height="wrap_content" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="0dp"
+                                android:layout_marginHorizontal="15dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="330dp"
+                                    android:layout_height="44dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    app:hintEnabled="false"
+                                    android:textSize="13dp"
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:hint="Contoh : A0001"
+                                    app:startIconContentDescription="NIK Pasien">
+
+                                    <!--                                    <com.google.android.material.textfield.TextInputEditText-->
+                                    <!--                                        android:id="@+id/et_ktpPasien"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="match_parent"-->
+                                    <!--                                        android:layout_marginLeft="18dp"-->
+                                    <!--                                        android:focusable="false"-->
+                                    <!--                                        android:fontFamily="@font/bariol_bold"-->
+                                    <!--                                        android:inputType="number" />-->
+                                </androidx.appcompat.widget.AppCompatEditText>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="Masukan Email / No. Telephone :"
+                                android:fontFamily="@font/bariol_bold"
+                                android:drawableLeft="@drawable/ic_baseline_circle_24"
+                                android:drawablePadding="10dp"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_height="wrap_content" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="0dp"
+                                android:layout_marginHorizontal="15dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="330dp"
+                                    android:layout_height="44dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    app:hintEnabled="false"
+                                    android:textSize="13dp"
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:hint="Contoh : Dokter@gmail.com"
+                                    app:startIconContentDescription="NIK Pasien">
+
+                                    <!--                                    <com.google.android.material.textfield.TextInputEditText-->
+                                    <!--                                        android:id="@+id/et_ktpPasien"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="match_parent"-->
+                                    <!--                                        android:layout_marginLeft="18dp"-->
+                                    <!--                                        android:focusable="false"-->
+                                    <!--                                        android:fontFamily="@font/bariol_bold"-->
+                                    <!--                                        android:inputType="number" />-->
+                                </androidx.appcompat.widget.AppCompatEditText>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="Masukan Password :"
+                                android:fontFamily="@font/bariol_bold"
+                                android:drawableLeft="@drawable/ic_baseline_circle_24"
+                                android:drawablePadding="10dp"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_height="wrap_content" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardElevation="0dp"
+                                android:layout_marginHorizontal="15dp"
+                                app:cardCornerRadius="10dp"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="330dp"
+                                    android:layout_height="44dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    app:hintEnabled="false"
+                                    android:textSize="13dp"
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:hint="Jaga password kamu dari orang lain"
+                                    app:startIconContentDescription="NIK Pasien">
+
+                                    <!--                                    <com.google.android.material.textfield.TextInputEditText-->
+                                    <!--                                        android:id="@+id/et_ktpPasien"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="match_parent"-->
+                                    <!--                                        android:layout_marginLeft="18dp"-->
+                                    <!--                                        android:focusable="false"-->
+                                    <!--                                        android:fontFamily="@font/bariol_bold"-->
+                                    <!--                                        android:inputType="number" />-->
+                                </androidx.appcompat.widget.AppCompatEditText>
+                            </androidx.cardview.widget.CardView>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp" />
+
+
+
+
+
+
+                           <TextView
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:text="Lupa Password ?"
+                               android:gravity="right"
+                               android:layout_marginRight="20dp"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/fabEdit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="16sp"
+                                android:text="Login"
+                                android:onClick="login"
+                                android:background="@drawable/ic_background_accent_rounded"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textAllCaps="false"
+                                android:textStyle="bold"
+                                app:iconTint="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/hsl_foto"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:visibility="gone"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.core.widget.NestedScrollView>
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints">
+                    <FrameLayout
+                        android:id="@+id/bottom_ubah_foto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+                        tools:ignore="MissingConstraints" />
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
