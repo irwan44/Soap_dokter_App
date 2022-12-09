@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Login Akun SOAP"
-                    android:textSize="14dp"
+                    android:textSize="24dp"
                     android:fontFamily="@font/bariol_bold"
                     android:layout_gravity="center"/>
             </LinearLayout>

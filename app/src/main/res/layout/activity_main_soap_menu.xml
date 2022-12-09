@@ -6,8 +6,6 @@
     android:background="#F2F1F6"
     xmlns:tools="http://schemas.android.com/tools">
 
-
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -76,16 +74,28 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="362dp"
+                    android:layout_height="398dp"
                     android:gravity="center"
                     android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/bariol_bold"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="Data Pasien"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:id="@+id/LayoutItem"
                         android:layout_width="match_parent"
                         android:layout_height="185dp"
                         android:layout_marginHorizontal="7dp"
-                        android:layout_marginTop="20dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
@@ -123,8 +133,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/bariol_bold"
-                                        android:textColor="@color/colorfont"
                                         android:text="Nomor Medical Record :"
+                                        android:textColor="@color/colorfont"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -205,18 +215,19 @@
                         android:layout_gravity="bottom"
                         android:layout_marginHorizontal="7dp"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="41dp"
                             android:layout_marginTop="10dp"
-                            android:gravity="center"
                             android:drawablePadding="5dp"
-                            android:paddingLeft="5dp"
-                            android:textSize="14sp"
-                            android:textColor="@color/white"
                             android:fontFamily="@font/bariol_bold"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
                             android:text="Data VITA SIGN"
-                            android:textStyle="bold"/>
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
