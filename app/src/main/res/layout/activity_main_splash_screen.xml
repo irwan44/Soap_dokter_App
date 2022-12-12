@@ -7,12 +7,12 @@
     tools:context=".MainSplashScreen"
     android:layout_centerInParent="true"
     android:layout_centerVertical="true"
-    android:background="@drawable/android_large___2"
+    android:background="#F1F1EF"
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="318dp"
-        android:layout_height="281dp"
+        android:layout_width="364dp"
+        android:layout_height="333dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="208dp"
@@ -25,8 +25,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:indeterminate="true"
             android:padding="5dp"
             android:src="@drawable/ic_logo_sirs"
@@ -45,30 +43,20 @@
             android:fontFamily="@font/montserrat_bold"
             android:indeterminate="true"
             android:text="SOAP Dokter"
-            android:textColor="@color/white"
             android:textSize="26sp"
-            app:layout_constraintBottom_toBottomOf="@+id/progressBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints" />
 
-        <ImageView
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="346dp"
-            android:layout_height="280dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:indeterminate="true"
-            android:padding="5dp"
-            android:src="@drawable/asset_1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="match_parent"
+            android:layout_height="208dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/gif5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </RelativeLayout>
 </RelativeLayout>
