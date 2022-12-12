@@ -39,7 +39,7 @@ public class MainDetailMR extends AppCompatActivity {
         dialogView = inflater.inflate(R.layout.alert_riwayat, viewGroup, false);
 //        Button btn_act_tidak = dialogView.findViewById(R.id.btn_cancel);
 //        Button btn_act_ya = dialogView.findViewById(R.id.btn_ok);
-//        Button btn_act_cancel = dialogView.findViewById(R.id.btn_cancel);
+        Button btn_act_cancel = dialogView.findViewById(R.id.btn_cancel);
         dial_builder.setView(dialogView);
         dial_riwayat = dial_builder.create();
         dial_riwayat.setCancelable(false);
@@ -60,12 +60,12 @@ public class MainDetailMR extends AppCompatActivity {
 //            }
 //        });
 //
-//        btn_act_tidak.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                dial_riwayat.dismiss();
-//            }
-//        });
+        btn_act_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dial_riwayat.dismiss();
+            }
+        });
 //
     }
     public void gosoap (View view) {
