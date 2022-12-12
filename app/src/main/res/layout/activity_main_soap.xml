@@ -141,6 +141,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
+                                android:id="@+id/txt_soap_selesai"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20"
@@ -189,6 +190,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
+                                android:id="@+id/txt_soap_pending"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20"
@@ -236,6 +238,7 @@
                             android:layout_height="match_parent">
 
                             <TextView
+                                android:id="@+id/txt_soap_total"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="20"
