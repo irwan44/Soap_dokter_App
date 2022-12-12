@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
-    android:layout_height="200dp"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:gravity="center"
     android:background="@drawable/round_corners"
@@ -15,12 +16,17 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/icon_light__type_arrow___left_circle" />
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/icon_light__type_arrow___left_circle"
+            android:src="@drawable/icon_light__type_arrow___left_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 
@@ -48,34 +54,34 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:orientation="horizontal"
-        android:padding="10dp">
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:layout_width="267dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="right"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="10dp">-->
 
-        <TextView
-            android:id="@+id/btn_ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:fontFamily="@font/bariol_bold"
-            android:text="OK" />
+<!--        <TextView-->
+<!--            android:id="@+id/btn_ok"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:fontFamily="@font/bariol_bold"-->
+<!--            android:text="OK" />-->
 
 
-        <!--            <androidx.appcompat.widget.AppCompatButton-->
-        <!--                android:id="@+id/btn_actKembali"-->
-        <!--                android:layout_width="wrap_content"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_marginStart="20dp"-->
-        <!--                android:layout_marginEnd="7dp"-->
-        <!--                android:background="@drawable/bg_rectangle_grey2"-->
-        <!--                android:backgroundTint="@color/red_maron"-->
-        <!--                android:paddingStart="40dp"-->
-        <!--                android:paddingEnd="40dp"-->
-        <!--                android:text="Cancel"-->
-        <!--                android:textColor="@color/white"-->
-        <!--                android:textStyle="bold" />-->
-    </androidx.appcompat.widget.LinearLayoutCompat>
+<!--        &lt;!&ndash;            <androidx.appcompat.widget.AppCompatButton&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:id="@+id/btn_actKembali"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_marginStart="20dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_marginEnd="7dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:background="@drawable/bg_rectangle_grey2"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:backgroundTint="@color/red_maron"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:paddingStart="40dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:paddingEnd="40dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:text="Cancel"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:textColor="@color/white"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:textStyle="bold" />&ndash;&gt;-->
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
 </LinearLayout>

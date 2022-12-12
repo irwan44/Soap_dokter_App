@@ -30,7 +30,7 @@ public class MainSOAP extends AppCompatActivity {
     }
 
     private void getDataSoap(){
-        
+
     }
 
     public void soapmenu (View view) {
