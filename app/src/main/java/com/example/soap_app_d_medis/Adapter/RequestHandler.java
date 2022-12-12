@@ -14,7 +14,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class SendtoAPI {
+public class RequestHandler {
 
     public static final String APIdev = "http://192.168.38.3";
 //   public static final String APIdev = "https://api-dev.averin.co.id";

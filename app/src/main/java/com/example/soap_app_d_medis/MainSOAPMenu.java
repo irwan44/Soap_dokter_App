@@ -10,9 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +27,9 @@ public class MainSOAPMenu extends AppCompatActivity {
 
     LinearLayout btn_detailmr;
     ImageView toolbar1;
+    TextView txt_nomr, txt_namapasien, txt_namaklinik,
+        txt_keadaanumum, txt_tekanandarah, txt_suhu, txt_tinggibadan, txt_kesdaran, txt_nadi, txt_pernafasan, txt_beratbadan;
+    EditText et_objektif, et_subyektif, et_terapi;
 
     //Dialog Confirm
     AlertDialog.Builder dial_builder;
