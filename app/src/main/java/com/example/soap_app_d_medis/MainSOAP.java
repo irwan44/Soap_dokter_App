@@ -32,9 +32,9 @@ public class MainSOAP extends AppCompatActivity {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
-        txt_soap_selesai = findViewById(R.id.txt_soap_selesai);
-        txt_soap_pending = findViewById(R.id.txt_soap_pending);
-        txt_soap_total = findViewById(R.id.txt_soap_total);
+//        txt_soap_selesai = findViewById(R.id.txt_soap_selesai);
+//        txt_soap_pending = findViewById(R.id.txt_soap_pending);
+//        txt_soap_total = findViewById(R.id.txt_soap_total);
 
     }
 
