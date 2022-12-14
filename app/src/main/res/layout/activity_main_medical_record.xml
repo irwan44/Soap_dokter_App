@@ -285,28 +285,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="50dp"
-                        android:fontFamily="@font/bariol_bold"
-                        android:text="Tanggal :"
-                        android:textColor="@color/colorfont"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_marginHorizontal="30dp"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/bariol_bold"
-                        android:text="12-12-2022"
-                        android:textColor="@color/colorfont"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:layout_marginTop="5dp"
                         android:layout_marginRight="70dp"
                         android:fontFamily="@font/bariol_bold"
                         android:text="Jam :"
@@ -331,7 +309,7 @@
                         android:clickable="true"
                         android:onClick="medical"
                         android:orientation="vertical"
-                        android:translationY="-70dp">
+                        android:translationY="-30dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -446,20 +424,20 @@
                                 android:layout_height="75dp"
                                 android:layout_marginHorizontal="5dp"
                                 android:layout_marginVertical="5dp"
-                                android:translationY="80dp"
                                 android:fontFamily="@font/bariol_bold"
                                 android:gravity="center"
                                 android:text="Cek MR"
                                 android:textColor="@color/colorfont"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:translationY="80dp" />
 
                             <ImageView
                                 android:layout_width="35dp"
                                 android:layout_height="75dp"
-                                android:translationY="80dp"
                                 android:layout_marginHorizontal="10dp"
                                 android:layout_marginVertical="5dp"
-                                android:src="@drawable/row" />
+                                android:src="@drawable/row"
+                                android:translationY="80dp" />
                         </LinearLayout>
 
                     </LinearLayout>
