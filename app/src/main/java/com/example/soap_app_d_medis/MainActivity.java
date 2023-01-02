@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         moveTaskToBack(true);
     }
+
     public void medical (View view) {
         Intent i = new Intent(MainActivity.this, MainMedicalRecord.class);
         startActivity(i);
