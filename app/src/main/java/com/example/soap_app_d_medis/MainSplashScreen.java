@@ -20,9 +20,9 @@ public class MainSplashScreen extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
 
         setContentView(R.layout.activity_main_splash_screen);
         new Handler().postDelayed(new Runnable() {

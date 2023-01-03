@@ -14,9 +14,9 @@ public class MainPendapatan extends AppCompatActivity {
         setContentView(R.layout.activity_main_pendapatan);
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
 
     }
 }

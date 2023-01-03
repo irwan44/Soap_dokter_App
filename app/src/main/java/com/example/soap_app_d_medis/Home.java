@@ -16,13 +16,13 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.home);
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
     }
 
     public void medical (View view) {
-        Intent i = new Intent(Home.this, MainMedicalRecord.class);
+        Intent i = new Intent(Home.this, MainDetailMR.class);
         startActivity(i);
     }
     public void historyantrian (View view) {

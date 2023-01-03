@@ -23,9 +23,9 @@ public class MainMedicalRecord extends AppCompatActivity {
         setContentView(R.layout.activity_main_medical_record);
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
 
 
 
@@ -39,14 +39,11 @@ public class MainMedicalRecord extends AppCompatActivity {
         Intent i = new Intent(MainMedicalRecord.this, MainDetailMR.class);
         startActivity(i);
     }
-    public void back1 (View view) {
-        Intent i = new Intent( MainMedicalRecord.this, MainActivity.class);
+    public void back2 (View view) {
+        Intent i = new Intent( MainMedicalRecord.this, Home.class);
         startActivity(i);
     }
-    public void selesai (View view) {
-        Intent i = new Intent( MainMedicalRecord.this, MainListMRSelesai.class);
-        startActivity(i);
-    }
+
     public void pending (View view) {
         Intent i = new Intent( MainMedicalRecord.this, MainListMRPending.class);
         startActivity(i);

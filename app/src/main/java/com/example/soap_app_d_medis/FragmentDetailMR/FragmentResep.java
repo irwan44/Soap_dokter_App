@@ -1,4 +1,4 @@
-package com.example.soap_app_d_medis;
+package com.example.soap_app_d_medis.FragmentDetailMR;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,16 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentAntrian1 extends Fragment {
+import com.example.soap_app_d_medis.R;
 
-    public static FragmentAntrian1 newInstance() {
-        return new FragmentAntrian1();
+public class FragmentResep extends Fragment {
+
+    public static FragmentResep newInstance() {
+        return new FragmentResep();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_anterian1, container, false);
+        View view = inflater.inflate(R.layout.fragment_history_resep_dokter, container, false);
         return view;
 
 

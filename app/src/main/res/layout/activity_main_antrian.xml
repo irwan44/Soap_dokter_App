@@ -7,6 +7,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainAntrian">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="1000dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -18,6 +31,7 @@
                     android:layout_height="98dp"
                     android:background="@drawable/bgdok"
                     android:orientation="vertical">
+
                     <com.google.android.material.appbar.CollapsingToolbarLayout
                         android:layout_width="match_parent"
                         android:layout_height="92dp"
@@ -57,7 +71,7 @@
                                     android:layout_height="35dp"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginTop="37dp"
-                                    android:onClick="back2"
+                                    android:onClick="toolbar2"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:navigationIcon="@drawable/arrow_left_circle" />
@@ -65,6 +79,7 @@
                             </androidx.constraintlayout.widget.ConstraintLayout>
                         </androidx.cardview.widget.CardView>
                     </com.google.android.material.appbar.CollapsingToolbarLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -76,7 +91,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
-                        android:orientation="horizontal"/>
+                        android:orientation="horizontal" />
 
                     <!--            <pl.droidsonroids.gif.GifImageView-->
                     <!--                android:id="@+id/gifImageView"-->
@@ -97,163 +112,122 @@
                 </LinearLayout>
             </LinearLayout>
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="110dp"
-                    android:scrollbarStyle="insideInset"
-                    android:scrollbars="none"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="detailklinik"
-                        android:orientation="horizontal">
-                  <include layout="@layout/itemrow_klinik"/>
-                        <include layout="@layout/itemrow_klinik"/>
-                        <include layout="@layout/itemrow_klinik"/>
-                        <include layout="@layout/itemrow_klinik"/>
-                    </LinearLayout>
-                </HorizontalScrollView>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/demo2"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/demo"
+                app:tabIndicatorColor="#98D5F5"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorHeight="54dp"
+                app:tabInlineLabel="true"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/green" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="280dp"
-        android:padding="5dp"
-        android:layout_marginEnd="32dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeColor="@color/transparan"
-        android:hint="Pilih Klinik"
-        android:gravity="right"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tabLayout">
 
-        <AutoCompleteTextView
-            android:id="@+id/pilihklinik"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColorHint="@color/colorfont"
-            android:fontFamily="@font/bariol_bold"
-            android:inputType="none"
-            android:textColor="@color/colorfont"
-            tools:text="Omega Tiga" />
-    </com.google.android.material.textfield.TextInputLayout>
+            </androidx.viewpager.widget.ViewPager>
 
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="362dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/demo2"
-                    app:tabGravity="fill"
-                    app:tabInlineLabel="true"
-                    app:tabIndicator="@drawable/demo"
-                    app:tabIndicatorColor="@color/white"
-                    app:tabIndicatorFullWidth="true"
-                    app:tabIndicatorGravity="stretch"
-                    app:tabIndicatorHeight="54dp"
-                    app:tabMode="fixed"
-                    app:tabTextColor="@color/green" />
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/personalinfo1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
 
-                <androidx.viewpager.widget.ViewPager
-                    android:layout_below="@id/tabLayout"
-                    android:id="@+id/viewPager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <!--                &lt;!&ndash;About Me Card&ndash;&gt;-->
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_marginHorizontal="6dp"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_height="wrap_content">-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                </LinearLayout>-->
 
-                </androidx.viewpager.widget.ViewPager>
-<!--            <LinearLayout-->
-<!--                android:id="@+id/personalinfo1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
+            <!--                <View-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"/>-->
+            <!--            </LinearLayout>-->
 
-<!--                &lt;!&ndash;About Me Card&ndash;&gt;-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_marginHorizontal="6dp"-->
-<!--                    android:orientation="vertical"-->
-<!--                    android:layout_marginTop="20dp"-->
-<!--                    android:layout_height="wrap_content">-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                </LinearLayout>-->
-
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="50dp"/>-->
-<!--            </LinearLayout>-->
-
-<!--            &lt;!&ndash;Experience Bottom Cards&ndash;&gt;-->
-<!--            <LinearLayout-->
-<!--                android:id="@+id/experience1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
+            <!--            &lt;!&ndash;Experience Bottom Cards&ndash;&gt;-->
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/experience1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
 
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_marginHorizontal="6dp"-->
-<!--                    android:orientation="vertical"-->
-<!--                    android:layout_marginTop="20dp"-->
-<!--                    android:layout_height="wrap_content">-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                </LinearLayout>-->
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_marginHorizontal="6dp"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_height="wrap_content">-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                </LinearLayout>-->
 
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="200dp"/>-->
-<!--            </LinearLayout>-->
+            <!--                <View-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="200dp"/>-->
+            <!--            </LinearLayout>-->
 
-<!--            &lt;!&ndash;Review Bottom Cards&ndash;&gt;-->
-<!--            <LinearLayout-->
-<!--                android:id="@+id/review1"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
+            <!--            &lt;!&ndash;Review Bottom Cards&ndash;&gt;-->
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/review1"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="vertical">-->
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_marginHorizontal="6dp"-->
-<!--                    android:orientation="vertical"-->
-<!--                    android:layout_marginTop="20dp"-->
-<!--                    android:layout_height="wrap_content">-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
-<!--                </LinearLayout>-->
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_marginHorizontal="6dp"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:layout_height="wrap_content">-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record" />-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                    <include layout="@layout/itemrow_pasien_medical_record"/>-->
+            <!--                </LinearLayout>-->
 
-<!--                <View-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="50dp"/>-->
-<!--            </LinearLayout>-->
+            <!--                <View-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"/>-->
+            <!--            </LinearLayout>-->
 
-<!--            <View-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="200dp"/>-->
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="200dp"/>-->
+            </LinearLayout>
 
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

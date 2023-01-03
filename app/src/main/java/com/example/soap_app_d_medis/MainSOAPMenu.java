@@ -48,11 +48,11 @@ public class MainSOAPMenu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_soap_menu);
+        setContentView(R.layout.activity_main_soap_menu2);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
 
         getSupportActionBar().hide();
 
@@ -88,12 +88,12 @@ public class MainSOAPMenu extends AppCompatActivity {
         dial_mr.setCanceledOnTouchOutside(false);
         //setOnclick listener
 
-        btn_detailmr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dial_mr.show();
-            }
-        });
+//        btn_detailmr.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dial_mr.show();
+//            }
+//        });
 
         btn_act_cencel .setOnClickListener(new View.OnClickListener() {
             @Override

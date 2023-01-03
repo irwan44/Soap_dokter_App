@@ -3,15 +3,15 @@ package com.example.soap_app_d_medis;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 
+import com.example.soap_app_d_medis.FragmentAntrian.FragmentAntrian1;
+import com.example.soap_app_d_medis.FragmentAntrian.FragmentAntrian2;
+import com.example.soap_app_d_medis.FragmentAntrian.FragmentAntrian3;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainAntrian extends AppCompatActivity {
@@ -27,25 +27,20 @@ public class MainAntrian extends AppCompatActivity {
         setContentView(R.layout.activity_main_antrian);
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
         viewPager = (ViewPager) findViewById(R.id.viewPager);
 
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         adapter = new TabAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FragmentAntrian1(), "Antrian Baru");
-        adapter.addFragment(new FragmentAntrian2(), "Menunggu");
-        adapter.addFragment(new FragmentAntrian3(), "Selesai");
+        adapter.addFragment(new FragmentAntrian1(), "Umum");
+        adapter.addFragment(new FragmentAntrian2(), "BPJS");
+        adapter.addFragment(new FragmentAntrian3(), "Asuransi");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, COUNTRIES);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) AutoCompleteTextView textView = (AutoCompleteTextView)
-                findViewById(R.id.pilihklinik);
-        textView.setAdapter(adapter);
 
 
 
@@ -62,10 +57,21 @@ public class MainAntrian extends AppCompatActivity {
         });*/
 
     }
-    private static final String[] COUNTRIES = new String[] {
-            "Klinik Omega 3", "Klinik Omega 4", "Klinik Omega 5"
-    };
+
     public void detailklinik (View view) {
         Intent i = new Intent(MainAntrian.this, MainAntrianKlinik.class);
         startActivity(i);
-    }}
+    }
+//    public void toolbar (View view) {
+//        Intent i = new Intent(MainAntrian.this, Home.class);
+//        startActivity(i);
+//    }
+    public void toolbar2 (View view) {
+        Intent i = new Intent(MainAntrian.this, Home.class);
+        startActivity(i);
+    }
+    public void medical2 (View view) {
+        Intent i = new Intent(MainAntrian.this, MainDetailMR.class);
+        startActivity(i);
+    }
+}

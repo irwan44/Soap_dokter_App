@@ -691,7 +691,7 @@
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="90dp"
@@ -711,7 +711,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

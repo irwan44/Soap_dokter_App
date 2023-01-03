@@ -1,4 +1,4 @@
-package com.example.soap_app_d_medis;
+package com.example.soap_app_d_medis.FragmentAntrian;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,16 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentAntrian2 extends Fragment {
+import com.example.soap_app_d_medis.R;
 
-    public static FragmentAntrian2 newInstance() {
-        return new FragmentAntrian2();
+public class FragmentAntrian1 extends Fragment {
+
+    public static FragmentAntrian1 newInstance() {
+        return new FragmentAntrian1();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_anterian2, container, false);
+        View view = inflater.inflate(R.layout.fragment_anterian1, container, false);
         return view;
+
+
+
     }
 }

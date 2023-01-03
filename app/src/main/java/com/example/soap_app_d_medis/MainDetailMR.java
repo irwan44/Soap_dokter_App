@@ -7,40 +7,63 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.viewpager.widget.ViewPager;
+
+import com.example.soap_app_d_medis.FragmentAntrian.FragmentAntrian1;
+import com.example.soap_app_d_medis.FragmentAntrian.FragmentAntrian2;
+import com.example.soap_app_d_medis.FragmentAntrian.FragmentAntrian3;
+import com.example.soap_app_d_medis.FragmentDetailMR.FragmentLabora;
+import com.example.soap_app_d_medis.FragmentDetailMR.FragmentResep;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainDetailMR extends AppCompatActivity {
     AppCompatButton btn_RiwayatPasien;
     LinearLayout personalinfo, experience, review;
     TextView personalinfobtn, experiencebtn, reviewbtn;
+
+    private TabAdapter adapter;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
     //Dialog Confirm
     AlertDialog.Builder dial_builder;
     AlertDialog dial_riwayat;
     LayoutInflater inflater;
     View dialogView;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_medical_record_pasien2);
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
+
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout2);
+        adapter = new TabAdapter(getSupportFragmentManager());
+            adapter.addFragment(new FragmentResep(), "Resep Docker");
+        adapter.addFragment(new FragmentLabora(), "Lobaratorium");
+        adapter.addFragment(new FragmentAntrian3(), "Radiologi");
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
 
         personalinfo = findViewById(R.id.personalinfo);
         experience = findViewById(R.id.experience);
         review = findViewById(R.id.review);
         personalinfobtn = findViewById(R.id.personalinfobtn);
         experiencebtn = findViewById(R.id.experiencebtn);
-        reviewbtn = findViewById(R.id.reviewbtn);
+//        reviewbtn = findViewById(R.id.reviewbtn);
         /*making personal info visible*/
         personalinfo.setVisibility(View.VISIBLE);
         experience.setVisibility(View.GONE);
@@ -56,7 +79,7 @@ public class MainDetailMR extends AppCompatActivity {
                 review.setVisibility(View.GONE);
                 personalinfobtn.setTextColor(getResources().getColor(R.color.green));
                 experiencebtn.setTextColor(getResources().getColor(R.color.gray));
-                reviewbtn.setTextColor(getResources().getColor(R.color.gray));
+//                reviewbtn.setTextColor(getResources().getColor(R.color.gray));
 
             }
         });
@@ -70,24 +93,24 @@ public class MainDetailMR extends AppCompatActivity {
                 review.setVisibility(View.GONE);
                 personalinfobtn.setTextColor(getResources().getColor(R.color.gray));
                 experiencebtn.setTextColor(getResources().getColor(R.color.green));
-                reviewbtn.setTextColor(getResources().getColor(R.color.gray));
+//                reviewbtn.setTextColor(getResources().getColor(R.color.gray));
 
             }
         });
 
-        reviewbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                personalinfo.setVisibility(View.GONE);
-                experience.setVisibility(View.GONE);
-                review.setVisibility(View.VISIBLE);
-                personalinfobtn.setTextColor(getResources().getColor(R.color.gray));
-                experiencebtn.setTextColor(getResources().getColor(R.color.gray));
-                reviewbtn.setTextColor(getResources().getColor(R.color.green));
-
-            }
-        });
+//        reviewbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                personalinfo.setVisibility(View.GONE);
+//                experience.setVisibility(View.GONE);
+//                review.setVisibility(View.VISIBLE);
+//                personalinfobtn.setTextColor(getResources().getColor(R.color.gray));
+//                experiencebtn.setTextColor(getResources().getColor(R.color.gray));
+//                reviewbtn.setTextColor(getResources().getColor(R.color.green));
+//
+//            }
+//        });
 
 
 //        btn_RiwayatPasien      = findViewById(R.id.btn_RiwayatPasien);
@@ -131,8 +154,12 @@ public class MainDetailMR extends AppCompatActivity {
         Intent i = new Intent(MainDetailMR.this, MainSOAPMenu.class);
         startActivity(i);
     }
-    public void back2 (View view) {
+    public void toolbar (View view) {
         Intent i = new Intent( MainDetailMR.this, MainMedicalRecord.class);
+        startActivity(i);
+    }
+    public void backsoap (View view) {
+        Intent i = new Intent( MainDetailMR.this, MainSOAPMenu.class);
         startActivity(i);
     }
 }

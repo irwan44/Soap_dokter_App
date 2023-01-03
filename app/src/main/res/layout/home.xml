@@ -32,6 +32,7 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
                     android:layout_height="wrap_content">
 
                     <LinearLayout
@@ -470,10 +471,10 @@
                 android:orientation="vertical"
                 android:layout_marginTop="20dp"
                 android:layout_height="wrap_content">
-            <include layout="@layout/itemrow_pasien_medical_record" />
-            <include layout="@layout/itemrow_pasien_medical_record"/>
-            <include layout="@layout/itemrow_pasien_medical_record"/>
-            <include layout="@layout/itemrow_pasien_medical_record"/>
+                <include layout="@layout/itemrow_pasien_medical_record" />
+                <include layout="@layout/itemrow_pasien_medical_record"/>
+                <include layout="@layout/itemrow_pasien_medical_record"/>
+                <include layout="@layout/itemrow_pasien_medical_record"/>
             </LinearLayout>
                 <View
                 android:layout_width="match_parent"

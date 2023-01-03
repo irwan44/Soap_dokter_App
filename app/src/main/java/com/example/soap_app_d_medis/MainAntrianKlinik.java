@@ -2,8 +2,10 @@ package com.example.soap_app_d_medis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 public class MainAntrianKlinik extends AppCompatActivity {
@@ -14,8 +16,12 @@ public class MainAntrianKlinik extends AppCompatActivity {
         setContentView(R.layout.activity_main_antrian_klinik);
         getSupportActionBar().hide();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+//            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        }
+    }
+    public void toolbar3 (View view) {
+        Intent i = new Intent( MainAntrianKlinik.this, MainAntrian.class);
+        startActivity(i);
     }
 }
