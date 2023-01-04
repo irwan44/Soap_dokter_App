@@ -1,5 +1,6 @@
 package com.example.soap_app_d_medis;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
@@ -12,9 +13,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.CalendarView;
+import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class MainMedicalRecord extends AppCompatActivity {
 
+    Calendar calendar;
+    CalendarView calendarView;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -26,7 +33,19 @@ public class MainMedicalRecord extends AppCompatActivity {
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
 //            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 //        }
+        calendarView = findViewById(R.id.calendarView);
 
+
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
+
+                String msg = "Selected date Day: " + i2 + " Month : " + (i1 + 1) + " Year " + i;
+                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
 
 
     }

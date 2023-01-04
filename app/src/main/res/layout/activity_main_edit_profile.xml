@@ -28,6 +28,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
+                    app:cardBackgroundColor="@color/green"
                     android:layout_height="match_parent"
                     app:cardElevation="0dp">
 
@@ -39,11 +40,11 @@
                             android:id="@+id/textView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="20dp"
                             android:fontFamily="@font/bariol_bold"
                             android:gravity="center"
                             android:text="Edit Profile"
                             android:textSize="20dp"
+                            android:textColor="@color/white"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
@@ -53,11 +54,11 @@
                             android:layout_width="40dp"
                             android:layout_height="35dp"
                             android:layout_marginStart="16dp"
-                            android:layout_marginTop="37dp"
+                            android:layout_marginTop="27dp"
                             android:onClick="back11"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:navigationIcon="@drawable/arrow_left_circle_back" />
+                            app:navigationIcon="@drawable/arrow_left_circle" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -79,7 +80,6 @@
                     android:layout_gravity="center"
                     android:indeterminate="true"
                     app:cardCornerRadius="10dp"
-                    android:src="@drawable/asset_2"
                     app:cardElevation="0dp"
                     android:layout_marginBottom="10dp"
                     android:padding="5dp"
@@ -293,6 +293,50 @@
                                     android:background="@color/white"
                                     android:fontFamily="@font/bariol_bold"
                                     android:hint="Omega Tiga"
+                                    android:textSize="13dp"
+                                    app:hintEnabled="false"
+                                    app:startIconContentDescription="NIK Pasien">
+
+                                    <!--                                    <com.google.android.material.textfield.TextInputEditText-->
+                                    <!--                                        android:id="@+id/et_ktpPasien"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="match_parent"-->
+                                    <!--                                        android:layout_marginLeft="18dp"-->
+                                    <!--                                        android:focusable="false"-->
+                                    <!--                                        android:fontFamily="@font/bariol_bold"-->
+                                    <!--                                        android:inputType="number" />-->
+                                </androidx.appcompat.widget.AppCompatEditText>
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="15dp"
+                                android:drawableLeft="@drawable/ic_baseline_circle_24"
+                                android:drawablePadding="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:text="Jam Praktek" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="15dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_marginLeft="10dp" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:layout_width="330dp"
+                                    android:layout_height="44dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:fontFamily="@font/bariol_bold"
+                                    android:hint="13 : 00 - 15 - 00"
                                     android:textSize="13dp"
                                     app:hintEnabled="false"
                                     app:startIconContentDescription="NIK Pasien">

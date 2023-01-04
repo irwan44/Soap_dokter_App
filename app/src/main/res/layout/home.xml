@@ -87,6 +87,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="120dp"
                             android:layout_height="130dp"
+                            android:onClick="profile"
                             android:layout_marginHorizontal="10dp"
                             android:layout_marginVertical="10dp"
                             app:cardCornerRadius="10dp">

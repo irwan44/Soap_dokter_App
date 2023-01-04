@@ -26,7 +26,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="98dp"
-                    android:background="@drawable/bgdok"
                     android:orientation="vertical">
                     <com.google.android.material.appbar.CollapsingToolbarLayout
                         android:layout_width="match_parent"
@@ -53,7 +52,7 @@
                                     android:layout_marginTop="20dp"
                                     android:fontFamily="@font/bariol_bold"
                                     android:gravity="center"
-                                    android:text="Medical Record"
+                                    android:text="History Medical Record"
                                     android:textColor="@color/white"
                                     android:textSize="20dp"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -106,6 +105,52 @@
                     <!--                android:layout_gravity="center"/>-->
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cari History Pasien \nBerdasarkan Tanggal Input Pasien"
+                android:fontFamily="@font/bariol_bold"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/colorfont"
+                android:textSize="20dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_white_1"
+                android:fontFamily="@font/bariol_bold"
+                android:textColor="@color/colorfont">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/ripple2"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="18dp" />
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   />
+
+
+            </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="6dp"

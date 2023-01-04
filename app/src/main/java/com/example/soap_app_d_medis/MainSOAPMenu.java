@@ -63,7 +63,7 @@ public class MainSOAPMenu extends AppCompatActivity {
 
 
         btn_edit_vita = findViewById(R.id.btn_vita);
-        btn_detailmr = findViewById(R.id.btn_detailmr);
+//        btn_detailmr = findViewById(R.id.btn_detailmr);
 //        toolbar = findViewById(R.id.toolbar);
 
         dial_builder = new AlertDialog.Builder(MainSOAPMenu.this,R.style.CustomAlertDialog);
@@ -178,8 +178,12 @@ public class MainSOAPMenu extends AppCompatActivity {
         Intent i = new Intent(MainSOAPMenu.this, MainDetailMR.class);
         startActivity(i);
     }
-    public void back4 (View view) {
-        Intent i = new Intent( MainSOAPMenu.this, MainSOAP.class);
+    public void toolbar7 (View view) {
+        Intent i = new Intent( MainSOAPMenu.this, MainAntrianKlinik.class);
+        startActivity(i);
+    }
+    public void cekmr (View view) {
+        Intent i = new Intent( MainSOAPMenu.this, MainDetailMR.class);
         startActivity(i);
     }
 }

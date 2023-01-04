@@ -25,7 +25,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="98dp"
-                    android:background="@drawable/bgdok"
                     android:orientation="vertical">
                     <com.google.android.material.appbar.CollapsingToolbarLayout
                         android:layout_width="match_parent"
@@ -91,6 +90,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginHorizontal="10dp"
                 app:cardCornerRadius="10dp"
+                android:layout_marginBottom="3dp"
                 app:cardElevation="0dp"
                 android:layout_height="wrap_content">
 
@@ -325,69 +325,6 @@
 
             </androidx.cardview.widget.CardView>
 
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:fontFamily="@font/bariol_bold"
-                    android:textSize="20dp"
-                    android:textColor="@color/colorfont"
-                    android:text="Data History SOAP Pasien"/>
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:layout_marginHorizontal="20dp"
-            android:background="@drawable/circularbordersolid"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/personalinfobtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:padding="13dp"
-                android:text="Vita Sign"
-                android:textColor="@color/green"
-                android:textAllCaps="true"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent" />
-
-            <TextView
-                android:id="@+id/experiencebtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:padding="13dp"
-                android:text="Pemeriksaan"
-                android:textAllCaps="true"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="1dp"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
         <LinearLayout
             android:id="@+id/personalinfo"
             android:layout_width="match_parent"
@@ -401,38 +338,66 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content">
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/expanded"
+                    android:onClick="expanded"
                     android:layout_width="match_parent"
-                    app:cardElevation="0dp"
                     app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_height="wrap_content">
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:orientation="vertical"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="20dp"
-                            android:layout_height="wrap_content">
+                            android:orientation="horizontal">
+
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="132dp"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/bariol_bold"
                                 android:text="Vital Sign"
-                                android:textStyle="bold"
                                 android:textColor="@color/green"
                                 android:textSize="18dp"
-                                android:fontFamily="@font/bariol_bold"/>
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:gravity="right"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/bariol_bold"
+                                android:gravity="right"
+                                android:text="Lihat"
+                                android:textColor="@color/green"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+                            </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/layout"
                             android:layout_width="match_parent"
                             android:layout_height="310dp"
+                            android:animateLayoutChanges="true"
                             android:paddingStart="20dp"
                             android:paddingTop="10dp"
                             android:paddingEnd="20dp"
-                            android:paddingBottom="20dp">
+                            android:paddingBottom="20dp"
+                            android:visibility="gone">
 
                             <GridLayout
                                 android:layout_width="match_parent"
@@ -840,24 +805,70 @@
 
             <!--About Me Card-->
 
-
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="50dp"/>
         </LinearLayout>
 
         <!--Experience Bottom Cards-->
         <LinearLayout
             android:id="@+id/experience"
             android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="3dp"
+                android:onClick="expanded2"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hasil Pemeriksaan"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/green"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/bariol_bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="right"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/bariol_bold"
+                            android:gravity="right"
+                            android:text="Lihat"
+                            android:textColor="@color/green"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
             <LinearLayout
+                android:id="@+id/layout2"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
+                android:visibility="gone"
+                android:animateLayoutChanges="true"
                 android:layout_marginTop="10dp"
                 android:layout_marginHorizontal="10dp"
                 android:layout_height="wrap_content">
@@ -895,7 +906,7 @@
                             android:layout_marginLeft="15dp"
                             android:layout_marginTop="40dp"
                             android:layout_marginBottom="10dp"
-                            android:background="@android:color/transparent"
+                            android:background="@drawable/ic_background_accent_rounded_putih"
                             android:focusable="true"
                             android:fontFamily="@font/bariol_bold"
                             android:gravity="top|left"
@@ -949,7 +960,7 @@
                             android:layout_marginLeft="15dp"
                             android:hint="isi Obyektif di sini"
                             android:fontFamily="@font/bariol_bold"
-                            android:background="@android:color/transparent"
+                            android:background="@drawable/ic_background_accent_rounded_putih"
                             android:padding="5dp"
                             android:enabled="false"
                             android:textSize="14sp"
@@ -996,7 +1007,7 @@
                             android:layout_marginBottom="10dp"
                             android:layout_marginLeft="15dp"
                             android:fontFamily="@font/bariol_bold"
-                            android:background="@android:color/transparent"
+                            android:background="@drawable/ic_background_accent_rounded_putih"
                             android:padding="5dp"
                             android:enabled="false"
                             android:hint="isi Terapi di sini"
@@ -1042,7 +1053,7 @@
                             android:layout_marginBottom="10dp"
                             android:layout_marginLeft="15dp"
                             android:fontFamily="@font/bariol_bold"
-                            android:background="@android:color/transparent"
+                            android:background="@drawable/ic_background_accent_rounded_putih"
                             android:padding="5dp"
                             android:hint="isi Terapi di sini"
                             android:textSize="14sp"
@@ -1054,6 +1065,8 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
 
@@ -1064,9 +1077,6 @@
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="50dp"/>
         </LinearLayout>
 
         <!--Review Bottom Cards-->
@@ -1107,7 +1117,7 @@
                 android:background="@drawable/demo2"
                 app:tabGravity="fill"
                 app:tabIndicator="@drawable/demo"
-                app:tabIndicatorColor="#98D5F5"
+                app:tabIndicatorColor="@color/green"
                 app:tabIndicatorFullWidth="true"
                 app:tabIndicatorGravity="stretch"
                 app:tabIndicatorHeight="54dp"

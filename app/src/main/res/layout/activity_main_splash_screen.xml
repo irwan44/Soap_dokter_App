@@ -19,19 +19,19 @@
         android:indeterminate="true"
         tools:layout_editor_absoluteX="4dp">
 
-        <ImageView
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:indeterminate="true"
-            android:padding="5dp"
-            android:src="@drawable/ic_logo_sirs"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="4dp" />
+<!--        <ImageView-->
+<!--            style="?android:attr/progressBarStyleLarge"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:indeterminate="true"-->
+<!--            android:padding="5dp"-->
+<!--            android:src="@drawable/ic_logo_sirs"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:ignore="MissingConstraints"-->
+<!--            tools:layout_editor_absoluteX="4dp" />-->
 
         <TextView
             android:id="@+id/txTitle"
@@ -42,7 +42,6 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/montserrat_bold"
             android:indeterminate="true"
-            android:text="SOAP Dokter"
             android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

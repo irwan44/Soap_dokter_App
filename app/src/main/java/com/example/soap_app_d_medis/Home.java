@@ -49,5 +49,9 @@ public class Home extends AppCompatActivity {
         Intent i = new Intent( Home.this, MainEditProfile.class);
         startActivity(i);
     }
+    public void profile (View view) {
+        Intent i = new Intent( Home.this, MainEditProfile.class);
+        startActivity(i);
+    }
 
 }
