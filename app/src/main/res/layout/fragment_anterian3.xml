@@ -9,8 +9,7 @@
         android:orientation="vertical"
         android:layout_marginTop="30dp"
         android:layout_height="wrap_content">
-        <include layout="@layout/itemrow_pasien_medical_record"/>
-        <include layout="@layout/itemrow_pasien_medical_record"/>
+        <include layout="@layout/itemrow_antrian_pasien" />
 
     </LinearLayout>
 
