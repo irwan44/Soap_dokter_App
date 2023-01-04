@@ -22,7 +22,7 @@ public class Home extends AppCompatActivity {
     }
 
     public void medical (View view) {
-        Intent i = new Intent(Home.this, MainDetailMR.class);
+        Intent i = new Intent(Home.this, MainSOAPMenu.class);
         startActivity(i);
     }
     public void historyantrian (View view) {
@@ -51,6 +51,10 @@ public class Home extends AppCompatActivity {
     }
     public void profile (View view) {
         Intent i = new Intent( Home.this, MainEditProfile.class);
+        startActivity(i);
+    }
+    public void medical2 (View view) {
+        Intent i = new Intent(Home.this, MainSOAPMenu.class);
         startActivity(i);
     }
 

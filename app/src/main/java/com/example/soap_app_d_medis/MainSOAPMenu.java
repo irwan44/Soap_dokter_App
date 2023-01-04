@@ -179,7 +179,7 @@ public class MainSOAPMenu extends AppCompatActivity {
         startActivity(i);
     }
     public void toolbar7 (View view) {
-        Intent i = new Intent( MainSOAPMenu.this, MainAntrianKlinik.class);
+        Intent i = new Intent( MainSOAPMenu.this, Home.class);
         startActivity(i);
     }
     public void cekmr (View view) {
