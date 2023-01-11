@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.soap_app_d_medis.Fragment.home"
+        android:name="averin.soap.com.Fragment.home"
         android:label="@string/title_home"
         tools:layout="@layout/home" />
 
     <fragment
         android:id="@+id/navigation_favourites"
-        android:name="com.example.soap_app_d_medis.Fragment.User"
+        android:name="averin.soap.com.Fragment.User"
         android:label="@string/title_favourites"
         tools:layout="@layout/fragment_user" />
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.soap_app_d_medis.Fragment.Dashboard"
+        android:name="averin.soap.com.Fragment.Dashboard"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_dashboard" />
 
